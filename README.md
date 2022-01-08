@@ -67,3 +67,7 @@ The api shares Typescript types with a NextJS application
 - when we are given `TypeError: Failed to fetch`, we have to add `CORS`
 - `yarn add cors`
 - this will allow anybody to request data from the server
+- in the api `main.ts` we add:
+  - `import * as cors from 'cors';`
+  - `app.use(cors());`
+- ⚠️ don't forget to add `search` in the dependency array in the `useEffect`! If you don't, you will end with continuous, _endless_ requests to your api - see `Network` tab in **Chrome Developer Tools** 😏
