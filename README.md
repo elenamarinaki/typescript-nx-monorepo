@@ -3,7 +3,7 @@
 ## Table of Contents 🌳
 
 1. [About](#about-)
-2. [Learning Notes](#learning-notes-)
+2. [Building the API](#building-the-api-)
 
 ## About 🚥
 
@@ -12,7 +12,7 @@
 Building an NX monorepo with an Express API.
 The api shares Typescript types with a NextJS application
 
-## Learning Notes 📚
+## Building the API 🧱
 
 ⬆️ [Go Back](#table-of-contents-)
 
