@@ -9,6 +9,7 @@
 - [Using the Shared Library](#using-the-shared-library-)
 - [Adding CORS](#adding-cors-)
 - [SSR](#ssr-)
+- [E2E Testing](#e2e-testing-)
 - [Learnings](#learnings-)
 
 ## About 🚥
@@ -85,6 +86,12 @@ The api shares Typescript types with a NextJS application
 - it's given **query parameters** and returns a bunch of **props**
 - these `props` will be passed to the page component
 - we can check if the SSR works by adding the query on the URL, attaching `?q=[search]`, then right-click and **View Page Source** (activate `Line wrap`). The `<input />` field will have the `value` of the **search** we passed in the URL.
+
+## E2E Testing 🧪
+
+⬆️ [Go Back](#table-of-contents-)
+
+- run `nx run next-pokemon-e2e:e2e`
 
 ## Learnings 👓
 
