@@ -21,6 +21,12 @@ app.get('/pokemon', (_, res) => {
   res.send(pokemon);
 });
 
+/**
+ * searching pokemons
+ * the endpoint is /search
+ * we type 'search?q=' + the name of the pokemon we want to find
+ * we are accessing the request object through 'req.query.q'
+ */
 app.get('/search', (req, res) => {
   const searchQuery = ((req.query.q as string) ?? '').toLowerCase();
 

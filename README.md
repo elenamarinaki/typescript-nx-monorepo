@@ -22,3 +22,6 @@ The api shares Typescript types with a NextJS application
   3. adjust the interface as needed
   4. `export const [name]: [nameType]` -> exporting the whole `json` as an object
   5. that's it! 👏
+- ### Searching **pokemons** @ `/search?q=`
+  1. our search in case-sensitive
+  2. we are accessing the request object through `req.query.q`
