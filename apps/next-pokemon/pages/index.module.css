@@ -1,2 +1,7 @@
 .page {
+  margin: auto;
+}
+
+.search {
+  border: 2px solid coral;
 }

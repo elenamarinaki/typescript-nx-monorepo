@@ -7,6 +7,7 @@
 - [Creating the NextJS App](#creating-the-nextjs-app-)
 - [Creating the Shared Library](#creating-the-shared-library-)
 - [Using the Shared Library](#using-the-shared-library-)
+- [Adding CORS](#adding-cors)
 
 ## About 🚥
 
@@ -26,8 +27,11 @@ The api shares Typescript types with a NextJS application
   4. `export const [name]: [nameType]` -> exporting the whole `json` as an object
   5. that's it! 👏
 - ### Searching **pokemons** @ `/search?q=`
+
   1. our search in case-sensitive
   2. we are accessing the request object through `req.query.q`
+
+- to run the api -> `nx run api:serve`
 
 ## Creating the NextJS App 📦
 
@@ -38,6 +42,7 @@ The api shares Typescript types with a NextJS application
   - `npm install @nrwl/next`
   - `nx g @nrwl/next:app`
 - now we should have 2 new folders into our `apps` directory: **next-pokemon** and **next-pokemon-e2e**!
+- to run -> `nx run next-pokemon:serve`
 
 ## Creating the Shared Library 📚
 
@@ -54,3 +59,11 @@ The api shares Typescript types with a NextJS application
 - we **move** the _Pokemon interface type_ from the `pokemon.json` to the `libs > shared-types > src > index.ts`
 - we import the type into our pokemon.json again: `import type { Pokemon } from '@nx-pokemon-1/shared-types';`
 - the workspace assumes the `libs` place automatically, so **the import does not need more explicit specification**
+
+## Adding CORS 🔩
+
+⬆️ [Go Back](#table-of-contents-)
+
+- when we are given `TypeError: Failed to fetch`, we have to add `CORS`
+- `yarn add cors`
+- this will allow anybody to request data from the server
