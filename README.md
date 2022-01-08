@@ -7,7 +7,7 @@
 - [Creating the NextJS App](#creating-the-nextjs-app-)
 - [Creating the Shared Library](#creating-the-shared-library-)
 - [Using the Shared Library](#using-the-shared-library-)
-- [Adding CORS](#adding-cors)
+- [Adding CORS](#adding-cors-)
 
 ## About 🚥
 
