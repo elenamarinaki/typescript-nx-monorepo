@@ -8,6 +8,8 @@
 - [Creating the Shared Library](#creating-the-shared-library-)
 - [Using the Shared Library](#using-the-shared-library-)
 - [Adding CORS](#adding-cors-)
+- [SSR](#ssr-)
+- [Learnings](#learnings-)
 
 ## About 🚥
 
@@ -71,3 +73,46 @@ The api shares Typescript types with a NextJS application
   - `import * as cors from 'cors';`
   - `app.use(cors());`
 - ⚠️ don't forget to add `search` in the dependency array in the `useEffect`! If you don't, you will end with continuous, _endless_ requests to your api - see `Network` tab in **Chrome Developer Tools** 😏
+
+## SSR ⚗️
+
+**(Server Side Rendering)**
+
+⬆️ [Go Back](#table-of-contents-)
+
+- we are using `getServerSideProps` to pre-render our page in each request
+- this function is external to the page, but goes and gets the data for the page
+- it's given **query parameters** and returns a bunch of **props**
+- these `props` will be passed to the page component
+
+## Learnings 👓
+
+⬆️ [Go Back](#table-of-contents-)
+
+- ### Difference between `req.query` & `req.params`
+
+given a route
+
+```javascript
+app.get('/hi/:param1', function (req, res) {});
+```
+
+and a URL
+`http://www.google.com/hi/there?qs1=you&qs2=tube`
+
+the `req.query` is:
+
+```javascript
+{
+  qs1: 'you',
+  qs2: 'tube'
+}
+```
+
+and the `req.params` is:
+
+```javascript
+{
+  param1: 'there';
+}
+```

@@ -3,7 +3,7 @@ import type { Pokemon } from '@nx-pokemon-1/shared-types';
 
 import styles from './index.module.css';
 
-export function Index() {
+const Index = () => {
   const [search, setSearch] = useState('');
   const [pokemon, setPokemon] = useState<Pokemon[]>([]);
 
@@ -30,6 +30,17 @@ export function Index() {
       </ul>
     </div>
   );
-}
+};
+
+export const getServerSideProps = async (context) => {
+  if (context.query.q) {
+    fetch(`http://localhost:3333/search?q=${search}`)
+      .then((res) => res.json())
+      .then((data) => setPokemon(data));
+  }
+  return {
+    props: {},
+  };
+};
 
 export default Index;
