@@ -84,6 +84,7 @@ The api shares Typescript types with a NextJS application
 - this function is external to the page, but goes and gets the data for the page
 - it's given **query parameters** and returns a bunch of **props**
 - these `props` will be passed to the page component
+- we can check if the SSR works by adding the query on the URL, attaching `?q=[search]`, then right-click and **View Page Source** (activate `Line wrap`). The `<input />` field will have the `value` of the **search** we passed in the URL.
 
 ## Learnings 👓
 

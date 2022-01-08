@@ -3,9 +3,15 @@ import type { Pokemon } from '@nx-pokemon-1/shared-types';
 
 import styles from './index.module.css';
 
-const Index = () => {
-  const [search, setSearch] = useState('');
-  const [pokemon, setPokemon] = useState<Pokemon[]>([]);
+const Index = ({
+  q,
+  pokemon: initialPokemon,
+}: {
+  q: string;
+  pokemon: Pokemon[];
+}) => {
+  const [search, setSearch] = useState(q);
+  const [pokemon, setPokemon] = useState<Pokemon[]>(initialPokemon);
 
   useEffect(() => {
     fetch(`http://localhost:3333/search?q=${search}`)
@@ -33,13 +39,18 @@ const Index = () => {
 };
 
 export const getServerSideProps = async (context) => {
+  let pokemon = [];
   if (context.query.q) {
-    fetch(`http://localhost:3333/search?q=${search}`)
-      .then((res) => res.json())
-      .then((data) => setPokemon(data));
+    const res = await fetch(
+      `http://localhost:3333/search?q=${context.query.q}`
+    );
+    pokemon = await res.json();
   }
   return {
-    props: {},
+    props: {
+      q: context.query.q ?? '',
+      pokemon,
+    },
   };
 };
 
