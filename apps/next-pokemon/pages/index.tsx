@@ -3,7 +3,7 @@ import styles from './index.module.css';
 
 export function Index() {
   const [search, setSearch] = useState('');
-  const [pokemon, setPokemon] = useState([]);
+  const [pokemon, setPokemon] = useState<Pokemon[]>([]);
 
   useEffect(() => {
     fetch(`http://localhost:3333/search?q=${search}`)

@@ -3,6 +3,7 @@
   "projects": {
     "api": "apps/api",
     "next-pokemon": "apps/next-pokemon",
-    "next-pokemon-e2e": "apps/next-pokemon-e2e"
+    "next-pokemon-e2e": "apps/next-pokemon-e2e",
+    "shared-types": "libs/shared-types"
   }
 }

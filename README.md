@@ -5,6 +5,8 @@
 - [About](#about-)
 - [Building the API](#building-the-api-)
 - [Creating the NextJS App](#creating-the-nextjs-app-)
+- [Creating the Shared Library](#creating-the-shared-library-)
+- [Using the Shared Library](#using-the-shared-library-)
 
 ## About 🚥
 
@@ -36,3 +38,19 @@ The api shares Typescript types with a NextJS application
   - `npm install @nrwl/next`
   - `nx g @nrwl/next:app`
 - now we should have 2 new folders into our `apps` directory: **next-pokemon** and **next-pokemon-e2e**!
+
+## Creating the Shared Library 📚
+
+⬆️ [Go Back](#table-of-contents-)
+
+- we have to create a shared library, where all `Typescript` types are going to be found
+- run `nx g @nrwl/node:lib shared-types`
+- this will create a `shared-types` folder inside the `libs` folder of our application
+
+## Using the Shared Library 💳
+
+⬆️ [Go Back](#table-of-contents-)
+
+- we **move** the _Pokemon interface type_ from the `pokemon.json` to the `libs > shared-types > src > index.ts`
+- we import the type into our pokemon.json again: `import type { Pokemon } from '@nx-pokemon-1/shared-types';`
+- the workspace assumes the `libs` place automatically, so **the import does not need more explicit specification**
