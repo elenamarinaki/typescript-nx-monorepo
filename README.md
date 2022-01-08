@@ -2,8 +2,9 @@
 
 ## Table of Contents 🌳
 
-1. [About](#about-)
-2. [Building the API](#building-the-api-)
+- [About](#about-)
+- [Building the API](#building-the-api-)
+- [Creating the NextJS App](#creating-the-nextjs-app-)
 
 ## About 🚥
 
@@ -25,3 +26,13 @@ The api shares Typescript types with a NextJS application
 - ### Searching **pokemons** @ `/search?q=`
   1. our search in case-sensitive
   2. we are accessing the request object through `req.query.q`
+
+## Creating the NextJS App 📦
+
+⬆️ [Go Back](#table-of-contents-)
+
+- with `nx list` we can see all the **NX** plugins that are installed in our application
+- then we add the `@nrwl/next` to create a **NextJS** app into our apps folder:
+  - `npm install @nrwl/next`
+  - `nx g @nrwl/next:app`
+- now we should have 2 new folders into our `apps` directory: **next-pokemon** and **next-pokemon-e2e**!
