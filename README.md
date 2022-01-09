@@ -92,6 +92,7 @@ The api shares Typescript types with a NextJS application
 ⬆️ [Go Back](#table-of-contents-)
 
 - run `nx run next-pokemon-e2e:e2e`
+- for `cypress` in **NX** check: https://nx.dev/cypress/overview
 
 ## Learnings 👓
 
