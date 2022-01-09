@@ -3,6 +3,7 @@
 ## Table of Contents 🌳
 
 - [About](#about-)
+- [Run Locally](#run-locally-)
 - [Building the API](#building-the-api-)
 - [Creating the NextJS App](#creating-the-nextjs-app-)
 - [Creating the Shared Library](#creating-the-shared-library-)
@@ -18,6 +19,18 @@
 
 Building an NX monorepo with an Express API.
 The api shares Typescript types with a NextJS application
+
+## Run Locally 💨
+
+⬆️ [Go Back](#table-of-contents-)
+
+- clone the repo to your machine
+- run `npm install` to install the `dependencies` & `devDependencies` locally
+- to run the `Express` api, run: `nx run api:serve`
+- to run the `NextJS` app, run: `nx run next-pokemon:serve`
+- to run the `Cypress` tests, run: `nx run next-pokemon-e2e:e2e`
+
+Have fun! 😊
 
 ## Building the API 🧱
 
